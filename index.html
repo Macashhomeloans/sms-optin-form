@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMS Opt-In | Dynamic Group Inc.</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 24px; margin-bottom: 30px; }
+    form { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+          label { display: flex; align-items: flex-start; margin-bottom: 20px; }
+    input[type="checkbox"] { margin-right: 10px; margin-top: 3px; }
+    p { font-size: 14px; line-height: 1.6; margin: 15px 0; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    input[type="text"], input[type="email"], input[type="tel"], textarea { 
+            width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ccc; 
+      border-radius: 4px; box-sizing: border-box; }
+    button { background: #0066cc; color: white; padding: 12px 24px; 
+             border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+    button:hover { background: #0052a3; }
+  </style>
+    </head>
+    <body>
+      <h1>Get Updates from Dynamic Group Inc.</h1>
+      <form method="POST" action="https://dynamic.revstackapp.com/api/submit-lead">
+        <label>
+          <input type="checkbox" id="sms-consent" name="sms_opted_in" value="true">
+          I agree to receive SMS messages from DYNAMIC GROUP, INC.
+    </label>
+    <p>
+      By checking this box, I agree to receive promotional and informational SMS 
+      messages from DYNAMIC GROUP, INC. about kitchen, bath, and closet remodeling 
+      services. Message frequency varies. Msg &amp; data rates may apply. 
+          Reply STOP to unsubscribe. Reply HELP for help.
+          <a href="https://dynamic.revstackapp.com/privacy">Privacy Policy</a> | 
+          <a href="https://dynamic.revstackapp.com/sms-terms">SMS Terms</a>
+        </p>
+        <div>
+          <input type="text" name="first_name" placeholder="First Name" required>
+          <input type="text" name="last_name" placeholder="Last Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="phone" placeholder="Phone" required>
+          <textarea name="project_description" placeholder="Tell us about your project" rows="4"></textarea>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </body>
+    </html>
